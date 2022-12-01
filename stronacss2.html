@@ -7,8 +7,19 @@
 	<link rel="stylesheet" href="style2.css">
 </head>
 <body>
-	<h1>JEŻE</h1>
 	<div id="div1">
+		<p id="powitanie"></p>
+		<script>
+		const hour = new Date().getHours(); 
+		var powitanie;
+		if (hour < 18) {
+			powitanie = "Dzień dobry!";
+			} else {
+			powitanie = "Dobry wieczór!";
+		}
+		document.getElementById("powitanie").innerHTML = powitanie;
+		</script>
+		<h1>JEŻE</h1>
 		<p><b><u>Jeż zachodni, jeż europejski</u></b> (Erinaceus europaeus) – gatunek ssaka łożyskowego z rodziny jeżowatych (Erinaceidae).</p>
 		<p>Występuje w <u class="wavy">klimacie</u> umiarkowanym na terenie od zachodniej Europy po zachodnią Polskę, Skandynawię i północno-zachodni obszar europejskiej części <del>Rosji.</p>
 		<p id="p1">Rzadko spotykany na północ od 60°N. Został introdukowany w Nowej Zelandii.</p>
@@ -75,6 +86,29 @@
 			</tr>
 		</table>
 	<p>Co możemy zrobić, gdy znajdziemy jeżyka? <a href="http://jerzydlajezy.com/znalazlem-jeza-i/?fbclid=IwAR2SS0K9Hsy-kBc9LAs88BZcBvFqihMXwVQe84WqR9X1bsbbWxhahBQpLng"><i>[Sprawdź]</i></a></p><br>
+	<p>Międzynarodowy Dzień Jeża obchodzimy 10 listopada, a dziś mamy:</p>
+	<p id="data"></p>
+	<script>
+		var d = new Date();
+		document.getElementById("data").innerHTML = d.toDateString();
+	</script>
+	<br><br><p>Szczęśliwy numerek na dziś:</p>
+	<p id="numerek"></p>
+	<script>
+		document.getElementById("numerek").innerHTML =
+		Math.floor(Math.random() * 101);
+	</script><br>
+	<img id="myImage" src="jezyk1.jpg" width="500px";><br>
+	<button onclick="document.getElementById('myImage').src='jezyk1.jpg'">chliip</button>
+	<button onclick="document.getElementById('myImage').src='jezyk2.jpg'">chluup</button><br><br>
+	<br><p>Jeże najchętniej tuptają nocą, a którą teraz mamy godzinę?</p>
+	<button onclick="pokazGodzinke()">----klik----</button>
+	<p id="godzinka"></p>
+	<script>
+		function pokazGodzinke() {
+		document.getElementById("godzinka").innerHTML = d.getHours() + ':' + d.getMinutes();
+		}
+	</script>
 	</div>
 </body>
 </html>
