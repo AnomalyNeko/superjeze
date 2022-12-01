@@ -19,6 +19,9 @@
 		}
 		document.getElementById("powitanie").innerHTML = powitanie;
 		</script>
+		<h1>  
+			<a href="#" onClick="alert('Miłego przeglądania strony!');">Pacnij tu 🦔</a>  
+		</h1>  
 		<h1>JEŻE</h1>
 		<p><b><u>Jeż zachodni, jeż europejski</u></b> (Erinaceus europaeus) – gatunek ssaka łożyskowego z rodziny jeżowatych (Erinaceidae).</p>
 		<p>Występuje w <u class="wavy">klimacie</u> umiarkowanym na terenie od zachodniej Europy po zachodnią Polskę, Skandynawię i północno-zachodni obszar europejskiej części <del>Rosji.</p>
@@ -109,6 +112,49 @@
 		document.getElementById("godzinka").innerHTML = d.getHours() + ':' + d.getMinutes();
 		}
 	</script>
+	<br><br><p>Jakie cechy wyglądu mają jeże? (zaznacz poprawne)</p>
+	<input type="checkbox" id="kolce" name="kolce">
+	<label for="kolce">Kolce</label><br>
+	<input type="checkbox" id="noski" name="noski">
+	<label for="noski">Śliczne noski</label><br>
+	<input type="checkbox" id="skrzydla" name="skrzydla" onclick="skrzydla()">
+	<label for="skrzydla">Skrzydła</label><br>
+	<input type="checkbox" id="stopki" name="stopki">
+	<label for="stopki">Słodkie stópki</label>
+	<p id="text" style="display:none">No, może czasami!<br><br><img src="skrzydla.jpg"></p>
+	<br><script>
+		function skrzydla() {
+			var checkBox = document.getElementById("skrzydla");
+			var text = document.getElementById("text");
+			if (checkBox.checked == true){
+				text.style.display = "block";
+			} else {
+				text.style.display = "none";
+			}
+		}
+	</script>
+		<br><br><p>Troszkę matematyki na pobudzenie<br><img src="nauczyciel.jpg"></p>
+		<input type="number" id="liczba1"><br/>+<br>
+		<input type="number" id="liczba2"><br/>
+		<input type="button" value="=" onclick="dodawanko()"><br/>
+		<input type="text" id="wynik" readonly><br><br><br><br>
+	<script>
+	function dodawanko(){
+		var liczba1 = document.getElementById("liczba1").value;
+		var liczba2 = document.getElementById("liczba2").value;
+		var suma = Number(liczba1) + Number(liczba2);
+		document.getElementById("wynik").value = suma;
+	}
+	</script>
+	<script>
+		document.write("Uuups, chyba nie pobudziło");
+	</script>
+	<script>
+		function mouseoverevent() {
+		alert("Ciiii, jeżyk śpi!");
+		}
+	</script>
+	<br><br><br><p>😴ZzzZzzZzzZzz😴<br><img src="spioch.jpg" onmouseover="mouseoverevent()"></p><br>
 	</div>
 </body>
 </html>
